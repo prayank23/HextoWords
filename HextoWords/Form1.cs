@@ -48,6 +48,7 @@ namespace HextoWords
             List<string> result = encode(tx_hex);
             uint total_words = 0;
             richTextBox2.Text = "start ";
+            int text_i;
             
             foreach (string j in result)
             {
@@ -62,8 +63,14 @@ namespace HextoWords
             label2.Visible = true;
             label2.Text = richTextBox2.TextLength.ToString() + " characters";
 
+            if (((decimal)richTextBox2.TextLength / 160) == richTextBox2.TextLength / 160)
+                text_i = richTextBox2.TextLength / 160;
+            else
+                text_i = (richTextBox2.TextLength / 160) + 1;
+            
+
             label3.Visible = true;
-            label3.Text = "These words will need " + (richTextBox2.TextLength / 160).ToString() + " text messages";
+            label3.Text = "These words will need " + text_i.ToString() + " text messages";
         }
         
     }
