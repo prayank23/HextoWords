@@ -38,9 +38,7 @@ namespace HextoWords
 
             };
             return result;
-        }
-
-  
+        }  
 
 
 
@@ -67,10 +65,6 @@ namespace HextoWords
             label3.Visible = true;
             label3.Text = "These words will need " + (richTextBox2.TextLength / 160).ToString() + " text messages";
         }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
